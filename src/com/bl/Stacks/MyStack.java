@@ -40,4 +40,43 @@ public class MyStack {
 	public boolean isEmpty() {
 		return top == null;
 	}
+	
+	
+	 public int peek()
+	    {
+	        // check for an empty stack
+	        if (isEmpty()) {
+	            System.out.println("The stack is empty");
+	            System.exit(-1);
+	        }
+	        return top.key;
+	    }
+	 
+	 
+	    //to pop a top element from the stack
+	    public int pop()       
+	    {
+	       
+	        if (isEmpty())
+	        {
+	            System.out.println("Stack Underflow");
+	            System.exit(-1);
+	        }
+	 
+	        // take note of the top node's data
+	        int top = peek();
+	 
+	        System.out.println("Removing " + top);
+	 
+	        // decrease stack's size by 1
+	        this.nodesCount -= 1;
+	 
+	        // update the top pointer to point to the next node
+	        this.top = (this.top).next;
+	 
+	        return top;
+	    }
+	
+	
+	
 }

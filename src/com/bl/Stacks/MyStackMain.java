@@ -16,9 +16,20 @@ public class MyStackMain {
 	        stack.push(56);
 	 
 	        System.out.println("The stack is " + stack);
-	
+	        stack.pop();
+	        stack.pop();
+	        stack.pop();
+	 
+	        if (stack.isEmpty()) {
+	            System.out.println("The stack is empty");
+	        }
+	        else {
+	            System.out.println("The stack is not empty");
+	        }
 	
 	}	
+	
+	
 	}
 
 
