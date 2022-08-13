@@ -44,5 +44,41 @@ public class Queue {
 	        } 
 	        return; 
 	    }
+	    
+	    
+	    static void dequeue()  { 
+	        // check if queue is empty 
+	        if (front == rear) { 
+	            System.out.printf("\nQueue is empty\n"); 
+	            return; 
+	        } 
+	   
+	        // shift elements to the right by one place uptil rear 
+	        else { 
+	            for (int i = 0; i < rear - 1; i++) { 
+	                queue[i] = queue[i + 1]; 
+	            } 
+	   
+	       
+	      // set queue[rear] to 0
+	            if (rear < capacity) 
+	                queue[rear] = 0; 
+	   
+	            // decrement rear 
+	            rear--; 
+	        } 
+	        return; 
+	    } 
+	    
+	    // print front of queue 
+	    static void queueFront() 
+	    { 
+	        if (front == rear) { 
+	            System.out.printf("Queue is Empty\n"); 
+	            return; 
+	        } 
+	        System.out.printf("\nFront Element of the queue: %d", queue[front]); 
+	        return; 
+	    } 
 
 }
