@@ -26,6 +26,9 @@ public class MyStackMain {
 	        else {
 	            System.out.println("The stack is not empty");
 	        }
+	        
+	        
+	        
 	
 	}	
 	
